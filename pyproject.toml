@@ -7,7 +7,7 @@ name = "mlx-sci"
 version = "0.1.0"
 description = "The missing scipy toolkit for Apple Silicon — GPU-accelerated special functions, linear algebra, signal processing, and quantum information via MLX"
 readme = "README.md"
-license = "MIT"
+license = {text = "MIT"}
 requires-python = ">=3.10"
 authors = [
     { name = "Sheng-Kai Huang", email = "akai@fawstudio.com" },
