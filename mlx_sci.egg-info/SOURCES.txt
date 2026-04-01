@@ -1,0 +1,11 @@
+pyproject.toml
+mlx_sci/__init__.py
+mlx_sci.egg-info/PKG-INFO
+mlx_sci.egg-info/SOURCES.txt
+mlx_sci.egg-info/dependency_links.txt
+mlx_sci.egg-info/requires.txt
+mlx_sci.egg-info/top_level.txt
+mlx_sci/linalg/__init__.py
+mlx_sci/quantum/__init__.py
+mlx_sci/signal/__init__.py
+mlx_sci/special/__init__.py

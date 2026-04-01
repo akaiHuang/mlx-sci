@@ -1,0 +1,17 @@
+mlx>=0.20.0
+numpy>=1.24.0
+mlx-airy>=0.1.0
+mlx-bessel>=0.1.0
+mlx-expm>=0.1.0
+mlx-fisher>=0.1.0
+mlx-gamma>=0.1.0
+mlx-hyp2f1>=0.1.0
+mlx-qre>=0.1.0
+mlx-stft>=0.1.0
+mlx-wigner>=0.1.0
+mlx-quantum-sim>=0.1.0
+
+[dev]
+pytest
+pytest-benchmark
+scipy

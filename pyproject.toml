@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlx-sci"
+version = "0.1.0"
+description = "The missing scipy toolkit for Apple Silicon — GPU-accelerated special functions, linear algebra, signal processing, and quantum information via MLX"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Sheng-Kai Huang", email = "akai@fawstudio.com" },
+]
+keywords = [
+    "mlx", "apple-silicon", "gpu", "special-functions", "scipy",
+    "airy", "bessel", "gamma", "hypergeometric", "wigner",
+    "matrix-exponential", "stft", "quantum-information", "fisher",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "mlx>=0.20.0",
+    "numpy>=1.24.0",
+    "mlx-airy>=0.1.0",
+    "mlx-bessel>=0.1.0",
+    "mlx-expm>=0.1.0",
+    "mlx-fisher>=0.1.0",
+    "mlx-gamma>=0.1.0",
+    "mlx-hyp2f1>=0.1.0",
+    "mlx-qre>=0.1.0",
+    "mlx-stft>=0.1.0",
+    "mlx-wigner>=0.1.0",
+    "mlx-quantum-sim>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-benchmark", "scipy"]
+
+[project.urls]
+Homepage = "https://github.com/akaiHuang/mlx-sci"
+Repository = "https://github.com/akaiHuang/mlx-sci"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mlx_sci*"]

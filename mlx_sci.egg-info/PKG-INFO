@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: mlx-sci
+Version: 0.1.0
+Summary: The missing scipy toolkit for Apple Silicon — GPU-accelerated special functions, linear algebra, signal processing, and quantum information via MLX
+Author-email: Sheng-Kai Huang <akai@fawstudio.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/akaiHuang/mlx-sci
+Project-URL: Repository, https://github.com/akaiHuang/mlx-sci
+Keywords: mlx,apple-silicon,gpu,special-functions,scipy,airy,bessel,gamma,hypergeometric,wigner,matrix-exponential,stft,quantum-information,fisher
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mlx>=0.20.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: mlx-airy>=0.1.0
+Requires-Dist: mlx-bessel>=0.1.0
+Requires-Dist: mlx-expm>=0.1.0
+Requires-Dist: mlx-fisher>=0.1.0
+Requires-Dist: mlx-gamma>=0.1.0
+Requires-Dist: mlx-hyp2f1>=0.1.0
+Requires-Dist: mlx-qre>=0.1.0
+Requires-Dist: mlx-stft>=0.1.0
+Requires-Dist: mlx-wigner>=0.1.0
+Requires-Dist: mlx-quantum-sim>=0.1.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-benchmark; extra == "dev"
+Requires-Dist: scipy; extra == "dev"
