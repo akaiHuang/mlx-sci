@@ -28,8 +28,9 @@ Quick start
     # Matrix exponential
     U = linalg.expm(-1j * H * t)
 
-    # STFT
-    spectrogram = signal.stft(audio)
+    # STFT (class-based, from mlx-stft)
+    stft = signal.STFT(n_fft=1024, hop_length=256, window=signal.hann_window(1024))
+    spectrogram = stft(audio)
 
     # Quantum relative entropy (eigh path, exact)
     sigma = quantum.quantum_relative_entropy(rho, rho_ref)
@@ -51,7 +52,7 @@ Quick start
 
 from mlx_sci import special, linalg, signal, quantum
 
-__version__ = "0.2.0"
+__version__ = "0.2.2"
 __author__ = "Sheng-Kai Huang"
 
 __all__ = ["special", "linalg", "signal", "quantum"]

@@ -1,48 +1,40 @@
 """
-mlx_special.signal — GPU-accelerated signal processing (scipy.signal equivalent)
+mlx_sci.signal — GPU-accelerated signal processing (scipy.signal equivalent)
 
-Functions
----------
-STFT / Spectrogram:
-    stft(x, ...)              — Short-Time Fourier Transform
-    istft(X, ...)             — Inverse STFT
-    mel_spectrogram(x, ...)   — Mel spectrogram
-    mel_filterbank(...)       — Mel filter bank matrix
-    hz_to_mel(hz)
-    mel_to_hz(mel)
+Class-based STFT / ISTFT layers from mlx-stft 0.1.2+.
 
-Windows:
+Transforms
+----------
+    STFT(...)                 — Short-Time Fourier Transform layer
+    ISTFT(...)                — Inverse STFT layer
+    CompiledSTFT(...)         — mx.compile-fused STFT (faster, fixed shape)
+    CompiledISTFT(...)        — mx.compile-fused inverse STFT
+    AmpToDB(...)              — amplitude-to-dB conversion
+
+Windows
+-------
     hann_window(N)
-    hamming_window(N)
     blackman_window(N)
-    kaiser_window(N, beta)
+    rect_window(N)
     get_window(name, N)
 """
 
-from mlx_stft import (
-    stft,
-    istft,
-    mel_spectrogram,
-    mel_filterbank,
-    hz_to_mel,
-    mel_to_hz,
+from mlx_stft import STFT, ISTFT, CompiledSTFT, CompiledISTFT, AmpToDB
+from mlx_stft.windows import (
     hann_window,
-    hamming_window,
     blackman_window,
-    kaiser_window,
+    rect_window,
     get_window,
 )
 
 __all__ = [
-    "stft",
-    "istft",
-    "mel_spectrogram",
-    "mel_filterbank",
-    "hz_to_mel",
-    "mel_to_hz",
+    "STFT",
+    "ISTFT",
+    "CompiledSTFT",
+    "CompiledISTFT",
+    "AmpToDB",
     "hann_window",
-    "hamming_window",
     "blackman_window",
-    "kaiser_window",
+    "rect_window",
     "get_window",
 ]

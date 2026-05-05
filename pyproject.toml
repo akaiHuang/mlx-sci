@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mlx-sci"
-version = "0.2.1"
+version = "0.2.2"
 description = "The missing scipy toolkit for Apple Silicon — GPU-accelerated special functions, linear algebra, signal processing, and quantum information via MLX"
 readme = "README.md"
 license = {text = "MIT"}
