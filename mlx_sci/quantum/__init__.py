@@ -63,8 +63,17 @@ from mlx_fisher import (
     NaturalGradientOptimizer,
 )
 
-from mlx_quantum_sim import MLXQuantumSimulator, MLXBatchSimulator
-from mlx_quantum_sim import noise_profiles
+try:
+    from mlx_quantum_sim import MLXQuantumSimulator, MLXBatchSimulator
+    from mlx_quantum_sim import noise_profiles
+    _HAS_QUANTUM_SIM = True
+except ImportError:
+    # mlx-quantum-sim is an optional extra (`pip install mlx-sci[sim]`).
+    # Circuit-simulation symbols are unavailable when it isn't installed.
+    _HAS_QUANTUM_SIM = False
+    MLXQuantumSimulator = None
+    MLXBatchSimulator = None
+    noise_profiles = None
 
 __all__ = [
     # QRE core

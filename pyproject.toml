@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mlx-sci"
-version = "0.2.0"
+version = "0.2.1"
 description = "The missing scipy toolkit for Apple Silicon — GPU-accelerated special functions, linear algebra, signal processing, and quantum information via MLX"
 readme = "README.md"
 license = {text = "MIT"}
@@ -42,11 +42,12 @@ dependencies = [
     "mlx-qre>=0.2.0",
     "mlx-stft>=0.1.0",
     "mlx-wigner>=0.1.0",
-    "mlx-quantum-sim>=0.1.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-benchmark", "scipy"]
+sim = ["mlx-quantum-sim>=0.1.0"]
+all = ["mlx-sci[sim]"]
 
 [project.urls]
 Homepage = "https://github.com/akaiHuang/mlx-sci"
