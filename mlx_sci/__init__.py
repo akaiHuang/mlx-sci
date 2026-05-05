@@ -52,7 +52,7 @@ Quick start
 
 from mlx_sci import special, linalg, signal, quantum
 
-__version__ = "0.2.2"
+__version__ = "0.2.3"
 __author__ = "Sheng-Kai Huang"
 
 __all__ = ["special", "linalg", "signal", "quantum"]
