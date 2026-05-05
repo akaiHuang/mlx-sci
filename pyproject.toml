@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mlx-sci"
-version = "0.1.0"
+version = "0.2.0"
 description = "The missing scipy toolkit for Apple Silicon — GPU-accelerated special functions, linear algebra, signal processing, and quantum information via MLX"
 readme = "README.md"
 license = {text = "MIT"}
@@ -16,25 +16,30 @@ keywords = [
     "mlx", "apple-silicon", "gpu", "special-functions", "scipy",
     "airy", "bessel", "gamma", "hypergeometric", "wigner",
     "matrix-exponential", "stft", "quantum-information", "fisher",
+    "stochastic-lanczos", "metal-kernel",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: MacOS",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Mathematics",
     "Topic :: Scientific/Engineering :: Physics",
 ]
 dependencies = [
-    "mlx>=0.20.0",
+    "mlx>=0.30.0",
     "numpy>=1.24.0",
-    "mlx-airy>=0.1.0",
+    "mlx-airy>=0.1.1",
     "mlx-bessel>=0.1.0",
-    "mlx-expm>=0.1.0",
+    "mlx-expm>=0.1.1",
     "mlx-fisher>=0.1.0",
-    "mlx-gamma>=0.1.0",
-    "mlx-hyp2f1>=0.1.0",
-    "mlx-qre>=0.1.0",
+    "mlx-gamma>=0.1.1",
+    "mlx-hyp2f1>=0.2.0",
+    "mlx-qre>=0.2.0",
     "mlx-stft>=0.1.0",
     "mlx-wigner>=0.1.0",
     "mlx-quantum-sim>=0.1.0",
@@ -46,6 +51,8 @@ dev = ["pytest", "pytest-benchmark", "scipy"]
 [project.urls]
 Homepage = "https://github.com/akaiHuang/mlx-sci"
 Repository = "https://github.com/akaiHuang/mlx-sci"
+Documentation = "https://github.com/akaiHuang/mlx-sci#readme"
+"Bug Tracker" = "https://github.com/akaiHuang/mlx-sci/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
